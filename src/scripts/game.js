@@ -5,6 +5,14 @@ import * as Colyseus from "colyseus.js"
 document.addEventListener("DOMContentLoaded", function(event) {
     (async function() {
 
+        const gameServerUrl = 'http://localhost:3010'
+
+        avatarUrl = './models/8f480707-f52a-4950-8ee2-1afb09f1e48c.glb'
+        avatarToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2xvdWQtbXRzdmVyc2UubXNjZGV2LnJ1XC9hdXRoXC9tdHNcL2NhbGxiYWNrIiwiaWF0IjoxNjk1MzM0NzQzLCJleHAiOjE2OTc5MjY3NDMsIm5iZiI6MTY5NTMzNDc0MywianRpIjoiTFlQY0c4Vkg1RjF1S0xvbyIsInN1YiI6NzE5LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwibmFtZSI6bnVsbCwidXVpZCI6IjE1NWRlNTI5LWY1MmQtNGJjZC1iZWZhLTk3NjMwZWExY2I2YyJ9.RYPJUzUlCjqXq8GRBUI1r8HzY5V_RysFpnaQkF9cORQ"; // "TestAccToken";
+        avatarKey = "85bf61acf99b0e6fa36c86c62d31273038a8a84b"; //"TestAccKey";
+        avatarDrone = false;
+        avatarAuthorized = false;
+
         const gameClient = new Colyseus.Client(gameServerUrl);
         let gameRoom = null;
         let _players = {};
@@ -124,13 +132,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         //    gameRoom = null
         //}
 
-        if (SHARED_VARS.isDevelopmentEnvironment) {
-            avatarUrl = getPathToAsset('./models/8f480707-f52a-4950-8ee2-1afb09f1e48c.glb');
-            avatarToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2xvdWQtbXRzdmVyc2UubXNjZGV2LnJ1XC9hdXRoXC9tdHNcL2NhbGxiYWNrIiwiaWF0IjoxNjk1MzM0NzQzLCJleHAiOjE2OTc5MjY3NDMsIm5iZiI6MTY5NTMzNDc0MywianRpIjoiTFlQY0c4Vkg1RjF1S0xvbyIsInN1YiI6NzE5LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwibmFtZSI6bnVsbCwidXVpZCI6IjE1NWRlNTI5LWY1MmQtNGJjZC1iZWZhLTk3NjMwZWExY2I2YyJ9.RYPJUzUlCjqXq8GRBUI1r8HzY5V_RysFpnaQkF9cORQ"; // "TestAccToken";
-            avatarKey = "85bf61acf99b0e6fa36c86c62d31273038a8a84b"; //"TestAccKey";
-            avatarDrone = false;
-            avatarAuthorized = false;
-        }
+
+
 
     })()
 })
