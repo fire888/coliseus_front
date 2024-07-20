@@ -11,68 +11,49 @@
 
 <body>
     <div id="game">
-        <div id="loader"></div>
-        <canvas id="canvas" touch-action="none"></canvas>
-        <!-- tech ui -->
-        <div id="ui">
-            <div id="fps"></div>
-            <div id="drop_zone_envTexture" class="drop_zone" style="top: 130px; z-index: 10;">
-                <p>Drag a tex file for replace env</p>
-            </div>
-            <div id="drop_zone_skyTexture" class="drop_zone" style="top: 220px; z-index: 10;">
-                <p>Drag a tex file for replace sky</p>
-            </div>
-            <div id="drop_zone_scene" class="drop_zone" style="top: 310px; z-index: 10;">
-                <p>Drag a glb file for replace scene</p>
-            </div>
-            <div id="version">
-                <p></p>
-            </div>
-            <select id="location">
-                <option value="1">Lobby</option>
-                <option value="11">Lobby Restart</option>
-                <option value="10">Lobby (old)</option>
-                <option value="2">Live</option>
-                <option value="20">Live (old)</option>
-                <option value="3" selected>Premium</option>
-                <option value="31">Premium Walls 1</option>
-                <option value="32">Premium Walls 2</option>
-                <option value="33">Premium Walls 3</option>
-                <option value="34">Premium Walls 4</option>
-                <option value="35">Premium Mill</option>
-                <option value="36">Premium Cells</option>
-                <option value="37">Premium Hammers</option>
-                <option value="30">Premium (old)</option>
-                <option value="4">Bank</option>
-                <option value="40">Bank (old)</option>
-                <option value="5">Stroki</option>
-                <option value="51">Stroki 1</option>
-                <option value="52">Stroki 2</option>
-                <option value="53">Stroki 3</option>
-                <option value="54">Stroki 4</option>
-                <option value="55">Stroki 5</option>
-                <option value="56">Stroki 6</option>
-                <option value="57">Stroki 7</option>
-                <option value="50">Stroki (old)</option>
-                <option value="6">Cube</option>
-                <option value="60">Cube (old)</option>
-                <option value="71">Kion Foye</option>
-                <option value="70">Kion (old)</option>
-            </select>
+        <button id="createRoom">create</button>
+        <br />
 
-            <button id="resume_button">Resume game</button>
-            <button id="gesture1_button">Gesture 1</button>
-            <button id="gesture2_button">Gesture 2</button>
-            <button id="gesture3_button">Gesture 3</button>
-            <button id="boosterSpeed_button">boosterSpeed</button>
-            <button id="boosterJump_button">boosterJump</button>
-            <button id="ticket_button">ticket</button>
-            <button id="restart_button">run again</button>
+        <select id="location">
+            <option value="1">Lobby</option>
+            <option value="11">Lobby Restart</option>
+            <option value="10">Lobby (old)</option>
+            <option value="2">Live</option>
+            <option value="20">Live (old)</option>
+            <option value="3">Premium</option>
+            <option value="31">Premium Walls 1</option>
+            <option value="32">Premium Walls 2</option>
+            <option value="33">Premium Walls 3</option>
+            <option value="34">Premium Walls 4</option>
+            <option value="35">Premium Mill</option>
+            <option value="36">Premium Cells</option>
+            <option value="37">Premium Hammers</option>
+            <option value="30">Premium (old)</option>
+            <option value="4">Bank</option>
+            <option value="40">Bank (old)</option>
+            <option value="5">Stroki</option>
+            <option value="51">Stroki 1</option>
+            <option value="52">Stroki 2</option>
+            <option value="53">Stroki 3</option>
+            <option value="54">Stroki 4</option>
+            <option value="55">Stroki 5</option>
+            <option value="56">Stroki 6</option>
+            <option value="57">Stroki 7</option>
+            <option value="50">Stroki (old)</option>
+            <option value="6">Cube</option>
+            <option value="60">Cube (old)</option>
+            <option value="71" selected>Kion Foye</option>
+            <option value="70">Kion (old)</option>
+        </select>
 
-            <button id="sounds_button">Toggle sounds</button>
-            <button id="music_button">Toggle music</button>
-        </div>
-        <!-- ui -->
+        <button id="butJoinAuto">autoJoin</button>
+
+        <br/>
+        <br/>
+
+        <input type="text" id="inputPass"/>
+        <input type="text" id="inputRoomId"/>
+        <button id="butJoinByIdRoom">joinById</button>
     </div>
 </body>
 
