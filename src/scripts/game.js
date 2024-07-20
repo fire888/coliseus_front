@@ -33,6 +33,8 @@ const init = async () => {
             //delete _players[sessionId]
         })
 
+        await gameRoom.leave()
+
         console.log('gameRoom', gameRoom)
         console.log('roomID', gameRoom.roomId)
     }
